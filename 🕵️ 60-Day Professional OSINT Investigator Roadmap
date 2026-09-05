@@ -1,0 +1,1227 @@
+
+# 🕵️ 60-Day Professional OSINT Investigator Roadmap
+
+### Target after 2 months
+
+আপনি যেন এই ধরনের কাজ করতে পারেন:
+
+**OSINT Researcher → Cyber Intelligence Researcher → Threat Intelligence/OSINT Analyst → Fraud Researcher → Due-Diligence Researcher → Junior Digital Investigator**
+
+বর্তমান freelance market-এ public-source investigation, digital-footprint mapping, social-media verification, evidence-backed reports, এবং ongoing identity monitoring-এর কাজ দেখা যাচ্ছে। একটি recent Upwork posting এমনকি redacted work samples এবং Maltego/SpiderFoot/Sherlock familiarity চেয়েছে। ([Upwork][1])
+
+---
+
+# 🗺️ Complete 8-Week Map
+
+| Week  | Main Goal                                  | আপনার Course Modules |
+| ----- | ------------------------------------------ | -------------------- |
+| **1** | Investigation Fundamentals                 | 1, 2, 3, 15          |
+| **2** | Core OSINT + People Investigation          | 4, 7, 8              |
+| **3** | Web / Domain / Infrastructure Intelligence | 9, 11                |
+| **4** | Social Media + Image/Geo Investigation     | 6, 8                 |
+| **5** | Breaches + Dark Web + Crypto               | 5, 13                |
+| **6** | Financial / Organized Crime Analysis       | 10, 12, 14, 16       |
+| **7** | AI + Deepfake + Professional Reporting     | 15, 17               |
+| **8** | Capstone + Portfolio + Freelancing         | 18 + everything      |
+
+Recommended workload:
+
+**3 hours/day × 6 days/week × 8 weeks ≈ 144 hours**
+
+এটা professional foundation তৈরির জন্য ভালো intensity।
+
+---
+
+# WEEK 1 — Investigator Mindset + Evidence
+
+### Module coverage
+
+**1. Cyber Crime & Forensics**
+**2. Bangladesh Cyber Crime Case Studies**
+**3. Cyber Intelligence & Monitoring**
+**15. Digital Evidence Collection**
+
+### Learn
+
+প্রথমেই tools না।
+
+শিখবেন:
+
+**Intelligence Lifecycle**
+
+```text
+Requirement
+    ↓
+Collection
+    ↓
+Processing
+    ↓
+Analysis
+    ↓
+Verification
+    ↓
+Reporting
+    ↓
+Decision
+```
+
+তারপর:
+
+* OSINT vs HUMINT vs SOCMINT vs CTI
+* Primary vs secondary sources
+* Source reliability
+* Confidence levels
+* Corroboration
+* Timeline building
+* Pivoting
+* Evidence preservation
+* Hashing concepts
+* Chain of custody
+* Screenshot vs archived evidence
+* URL/source logging
+* Investigator OPSEC
+* Research browser/VM
+* Ethical/legal boundaries
+
+### Important professional habit
+
+প্রতিটি finding লিখবেন:
+
+```text
+Claim:
+Source:
+URL:
+Access Date:
+Evidence:
+Corroborating Source:
+Confidence:
+Analyst Note:
+```
+
+এই habit-টাই beginner আর professional investigator-এর বড় difference।
+
+### Lab
+
+একটি **public cybercrime case** নিন।
+
+তৈরি করুন:
+
+**2-page Intelligence Brief**
+
+* Incident summary
+* Timeline
+* People/organizations
+* Infrastructure
+* Sources
+* Key findings
+* Confidence assessment
+* Unknowns
+
+---
+
+# WEEK 2 — Core OSINT + Identity Investigation
+
+### Modules
+
+**4. OSINT Techniques**
+**7. Name / Email / Username / People Search**
+**8. Google Dorking + Reverse Image**
+
+এখান থেকে আসল investigation শুরু।
+
+## Learn Advanced Search
+
+Google/Bing operators:
+
+```text
+site:
+filetype:
+intitle:
+inurl:
+"exact phrase"
+OR
+-
+before:
+after:
+```
+
+কিন্তু goal হবে query মুখস্থ করা নয়।
+
+শিখবেন:
+
+> **One clue → multiple pivots**
+
+Example:
+
+```text
+Username
+   ↓
+Other platforms
+   ↓
+Profile image
+   ↓
+Reverse image
+   ↓
+Website
+   ↓
+Domain
+   ↓
+Email
+   ↓
+Organization
+```
+
+### Tool stack
+
+**Search**
+
+* Google
+* Bing
+* Brave Search
+* Internet Archive / Wayback Machine
+
+**Username**
+
+* WhatsMyName
+* Sherlock
+
+**Email**
+
+* Hunter
+* public search
+* Have I Been Pwned for lawful exposure checks
+
+**Images**
+
+* Google Lens
+* TinEye
+* Yandex Images
+
+**Metadata**
+
+* ExifTool
+
+---
+
+# ⭐ Lab 2
+
+Use a **CTF/fictitious identity or your own identity**.
+
+Create:
+
+### Digital Footprint Report
+
+```text
+1. Executive Summary
+2. Known identifiers
+3. Username findings
+4. Email findings
+5. Social accounts
+6. Image findings
+7. Websites/domains
+8. Timeline
+9. Confidence
+10. Sources
+```
+
+This becomes **Portfolio Sample #1**.
+
+---
+
+# WEEK 3 — Domain, IP & Web Intelligence
+
+### Modules
+
+**9. Domain/User IP Investigation**
+**11. Web-Based Crime Investigation**
+
+এখানে cybersecurity knowledge huge advantage দেবে।
+
+Learn:
+
+* DNS
+* WHOIS/RDAP
+* ASN
+* IP ownership
+* Hosting providers
+* Domain history concepts
+* DNS history
+* Subdomains
+* TLS certificates
+* Certificate Transparency
+* Website technologies
+* Archived websites
+* Related infrastructure
+* Passive infrastructure correlation
+
+### Tools
+
+```text
+WHOIS / RDAP
+crt.sh
+DNSDumpster
+Shodan
+Censys
+VirusTotal
+SecurityTrails
+urlscan.io
+BuiltWith
+Wayback Machine
+Maltego
+SpiderFoot
+```
+
+SANS-এর current SEC497 OSINT curriculum-তেও WHOIS, DNS, Amass, Censys, Shodan, username research, email analysis, reverse-image work এবং reporting-oriented investigation রয়েছে; course-এ 29 hands-on labs আছে। ([SANS Institute][2])
+
+---
+
+# ⭐ Lab 3
+
+Choose an **authorized lab domain or your own domain**.
+
+Produce:
+
+### Infrastructure Intelligence Report
+
+```text
+Domain
+ ├── Registrar
+ ├── DNS
+ ├── Subdomains
+ ├── Certificates
+ ├── IPs
+ ├── ASN
+ ├── Hosting
+ ├── Technologies
+ ├── Historical records
+ └── Related infrastructure
+```
+
+Use **Maltego** to produce a relationship graph.
+
+Maltego এখন free Basic tier-এ Graph, limited data credits এবং Maltego Academy access দেয়। ([Maltego Support Portal][3])
+
+[Explore Maltego Academy and training](https://www.maltego.com/?utm_source=chatgpt.com)
+
+---
+
+# WEEK 4 — Social Media + Image + Geolocation
+
+### Module
+
+**6. Social Media Based Crime & Investigation**
+
+এটা highly marketable skill।
+
+### Learn SOCMINT
+
+Investigate:
+
+* Username reuse
+* Profile relationships
+* Posting timeline
+* Account history
+* Bio changes
+* Image reuse
+* Public interactions
+* Organizations
+* Hashtags
+* Location indicators
+* Temporal indicators
+
+তারপর:
+
+### Image Verification
+
+শিখবেন:
+
+```text
+Image
+ ↓
+Reverse Search
+ ↓
+Earliest appearance
+ ↓
+Source comparison
+ ↓
+Landmarks
+ ↓
+Signs / language
+ ↓
+Weather
+ ↓
+Shadow
+ ↓
+Map comparison
+ ↓
+Geolocation assessment
+```
+
+### Tools
+
+* Google Lens
+* TinEye
+* Mapillary
+* Google Maps
+* Google Earth
+* OpenStreetMap
+* SunCalc
+* ExifTool
+* InVID/WeVerify
+
+Bellingcat-এর Online Investigations Toolkit-এ social media, maps, satellite imagery, archiving এবং অন্যান্য investigative categories-এর curated tools ও use-case guidance আছে। ([bellingcat][4])
+
+[Bellingcat investigation resources](https://www.bellingcat.com/?utm_source=chatgpt.com)
+
+---
+
+# ⭐ Lab 4
+
+Perform 5 CTF-style challenges:
+
+**2× reverse-image**
+
+**2× geolocation**
+
+**1× social-media verification**
+
+Write every solution as a mini investigation report.
+
+---
+
+# WEEK 5 — Breaches + Dark Web + Cryptocurrency
+
+### Modules
+
+**5. Data Breaches & Leaks Investigation**
+**13. Tor/VPN/Dark Web/Cryptocurrency**
+
+এখানে strong ethical boundaries দরকার।
+
+## Breach Intelligence
+
+Learn:
+
+* Credential exposure concepts
+* Combo-list concepts
+* Data-breach validation
+* Hash concepts
+* Breach timelines
+* Organizational exposure
+* Credential reuse risk
+* Threat actor claims verification
+
+Training-এর জন্য stolen databases collect/download না করে **authorized datasets, CTFs, HIBP-style exposure checks ও simulated breach data** ব্যবহার করুন।
+
+---
+
+## Dark-Web Intelligence
+
+Learn:
+
+```text
+Surface Web
+Deep Web
+Dark Web
+Tor
+.onion
+Marketplace ecosystem
+Forums
+Threat actor aliases
+Ransomware leak sites
+Dark-web monitoring methodology
+```
+
+Focus হবে **passive intelligence collection**, illegal purchasing/access নয়।
+
+---
+
+# Cryptocurrency OSINT
+
+Learn:
+
+* Wallet addresses
+* Transaction IDs
+* Block explorers
+* Transaction graph
+* Input/output concepts
+* Exchange attribution concepts
+* Wallet clustering concepts
+* Cross-chain limitations
+* Confidence assessment
+
+Tools/examples:
+
+```text
+Etherscan
+Blockchain explorers
+Maltego
+Graph visualization tools
+```
+
+---
+
+# ⭐ Lab 5
+
+Synthetic scenario:
+
+> Fake company receives suspicious crypto payments.
+
+Produce:
+
+```text
+Wallet A
+ ↓
+Transactions
+ ↓
+Wallet B/C
+ ↓
+Known service
+ ↓
+Timeline
+ ↓
+Analyst assessment
+```
+
+No claim should exceed what public blockchain evidence supports.
+
+---
+
+# WEEK 6 — Financial Crime + Organized Crime Analysis
+
+### Modules
+
+**10. CDR/IPDR/IPTSP/ISP Log Analysis**
+
+**12. Mobile Financial Crime**
+
+**14. Organised Crime**
+
+**16. AML & Financing**
+
+এখানে একটা critical rule:
+
+## CDR/IPDR ≠ normal public OSINT
+
+Real:
+
+* CDR
+* IPDR
+* subscriber records
+* ISP customer records
+* mobile financial records
+
+সাধারণ OSINT freelancer আইনগত authorization ছাড়া collect করতে পারে না।
+
+তাই training করবেন:
+
+**synthetic datasets + authorized logs** দিয়ে।
+
+### Learn
+
+CDR fields:
+
+```text
+Caller
+Receiver
+Timestamp
+Duration
+Cell/Site
+IMEI
+IMSI
+```
+
+IPDR:
+
+```text
+Source IP
+Destination IP
+Port
+Timestamp
+Protocol
+Session duration
+Data volume
+```
+
+তারপর link analysis:
+
+```text
+Person A ── Person B
+   │          │
+Phone      Account
+   │          │
+Device ─── Location
+   │
+Transaction
+```
+
+### Tools
+
+* Excel / Google Sheets
+* Python/pandas
+* SQLite
+* Maltego
+* Gephi
+* yEd
+* Timeline tools
+
+---
+
+# AML Skills
+
+Learn:
+
+* KYC concepts
+* UBO
+* PEP
+* sanctions
+* shell companies
+* beneficial ownership
+* company networks
+* transaction red flags
+* adverse-media research
+
+### Lab
+
+Create a fake network of:
+
+**8 people + 4 companies + 5 phone numbers + transactions**
+
+Then answer:
+
+> Who appears central to the network?
+
+Use:
+
+* link chart
+* timeline
+* evidence table
+* intelligence assessment
+
+---
+
+# WEEK 7 — AI, Deepfakes & Investigation Automation
+
+### Module
+
+**17. AI Tools + Deepfake Detection**
+
+Do **not** become dependent on “AI detector says 93% fake.”
+
+Professional verification should combine:
+
+```text
+Source provenance
++
+Reverse search
++
+Metadata
++
+Frame inspection
++
+Audio/video anomalies
++
+Context verification
++
+Independent sources
+```
+
+### AI use
+
+AI can assist with:
+
+* Query generation
+* Translation
+* Timeline extraction
+* Large-text summarization
+* Entity extraction
+* Report editing
+* CSV analysis
+* Relationship suggestions
+
+But AI-generated leads ≠ evidence.
+
+Always manually verify.
+
+---
+
+# Automation
+
+Learn basic:
+
+**Python**
+
+```text
+requests
+BeautifulSoup
+pandas
+regex
+JSON
+CSV
+APIs
+```
+
+Automate:
+
+```text
+Domain → DNS → IP → ASN
+Username → platform checks
+URLs → archive checks
+CSV → timeline
+Evidence → structured table
+```
+
+### Lab
+
+Build one small portfolio tool:
+
+**OSINT Case Organizer**
+
+Input:
+
+```text
+URLs + notes + dates
+```
+
+Output:
+
+```text
+CSV evidence log
+Timeline
+Source list
+Confidence tags
+```
+
+This is excellent GitHub material.
+
+---
+
+# WEEK 8 — Real Investigation Simulation
+
+### Module
+
+**18. Assignment & Presentation**
+
+Week 8 = **no new theory**.
+
+Run a complete capstone.
+
+---
+
+# 🎯 Capstone Investigation
+
+Use a fictional/CTF/public organizational scenario.
+
+Example:
+
+> An unknown organization is running several related websites and social-media accounts. Determine the publicly verifiable infrastructure, digital footprint, relationships, timeline and risk indicators.
+
+Investigate:
+
+```text
+Domain
+↓
+IP
+↓
+Infrastructure
+↓
+Social Accounts
+↓
+Username
+↓
+Email
+↓
+Images
+↓
+Archived Pages
+↓
+Companies
+↓
+Relationships
+↓
+Timeline
+↓
+Assessment
+```
+
+Final deliverables:
+
+### 1. Executive Intelligence Report — 8–15 pages
+
+### 2. Evidence spreadsheet
+
+### 3. Maltego/link-analysis graph
+
+### 4. Timeline
+
+### 5. 5-slide executive briefing
+
+### 6. Redacted portfolio version
+
+---
+
+# 🧰 Your Professional OSINT Toolkit
+
+By Day 60, aim to be comfortable with:
+
+| Area          | Tools                               |
+| ------------- | ----------------------------------- |
+| Search        | Google, Bing, Brave                 |
+| Archives      | Wayback Machine                     |
+| Username      | WhatsMyName, Sherlock               |
+| Image         | Lens, TinEye, ExifTool              |
+| Domain        | WHOIS/RDAP, crt.sh                  |
+| DNS/IP        | DNSDumpster, Censys, Shodan         |
+| Cyber Intel   | VirusTotal, urlscan.io              |
+| Link Analysis | Maltego, Gephi/yEd                  |
+| Automation    | Python, pandas                      |
+| Evidence      | Hunchly or structured evidence logs |
+| Maps          | Google Earth, OSM, Mapillary        |
+| Notes         | Obsidian/Notion                     |
+| Reporting     | Word/Docs/PDF                       |
+
+Maltego's current platform specifically supports link analysis, person-of-interest investigations, cases and evidence workflows, and its Academy is built for cybercrime/OSINT investigators. ([Maltego Support Portal][5])
+
+---
+
+# 🎓 Which Certifications Do You Actually Need?
+
+## Important answer: **none is mandatory**
+
+You do **not** need 5 OSINT certificates before earning.
+
+I would follow this order:
+
+| Priority | Certification                   | When                  | Recommendation               |
+| -------- | ------------------------------- | --------------------- | ---------------------------- |
+| 🥇       | **TCM PORP**                    | Month 2–3             | ⭐ Best first practical cert  |
+| 🥈       | **Maltego Academy Certificate** | Month 1–2             | Great supplemental           |
+| 🥉       | **Trace Labs Badge/CTF**        | Anytime               | Excellent portfolio evidence |
+| 🔥       | **IntelTechniques OSIP**        | Later                 | Advanced professional        |
+| 🏆       | **GIAC GOSI**                   | Employer-funded/later | Premium                      |
+
+---
+
+# 🥇 1. TCM Practical OSINT Research Professional — PORP
+
+For someone following this roadmap, this is probably the **best first serious certification**.
+
+Current PORP exam requires practical OSINT research and a professionally written report rather than multiple-choice questions. Candidates receive **72 hours**, and current exam/training bundle pricing is **$399**, including 9+ hours of training and a free retake. ([TCM Certifications][6])
+
+Topics include:
+
+* Search-engine OSINT
+* Image OSINT
+* Email
+* Breach exposure
+* People
+* Phone
+* Username
+* Websites
+* Social media
+* Automation
+* Reporting
+
+[TCM PORP certification details](https://certifications.tcm-sec.com/porp/?utm_source=chatgpt.com)
+
+### My priority:
+
+**★★★★★**
+
+Do this first if budget permits.
+
+---
+
+# 🥈 Maltego Academy
+
+Especially useful because your course has:
+
+* cybercrime
+* identity
+* domains
+* breached data
+* network analysis
+
+Maltego Academy has a cybercrime investigation path covering names, email addresses, usernames and phone-number investigations, with a completion certificate; Academy access is also available through the free Basic offering. ([Maltego][7])
+
+### Priority
+
+**★★★★☆**
+
+---
+
+# 🥉 Trace Labs OSINT Search Party
+
+This isn't a replacement for a professional certification.
+
+But it can be excellent evidence of **hands-on OSINT practice**.
+
+Trace Labs runs OSINT Search Party CTFs around missing-person investigations and provides participation badges; its documentation also contains challenges, training and CTF write-ups. ([Trace Labs Docs][8])
+
+[Trace Labs training documentation](https://docs.tracelabs.org/?utm_source=chatgpt.com)
+
+### Priority
+
+**★★★★★ for practice**
+
+---
+
+# 🔥 IntelTechniques OSIP
+
+This is much more advanced.
+
+Current IntelTechniques training is **$699/year**, and the optional OSIP assessment costs another **$300**. Completing its training is a prerequisite for the assessment. ([IntelTechniques][9])
+
+The assessment is interesting because you're expected to take an investigation **from mission briefing to completed professional case file/report**. ([IntelTechniques][10])
+
+### Priority
+
+**★★★★☆ — after real experience**
+
+Don't rush this in your first 60 days.
+
+---
+
+# 🏆 GIAC GOSI
+
+**GIAC Open Source Intelligence — GOSI**
+
+This is the premium track.
+
+It covers:
+
+* OSINT methodology
+* Collection
+* Analysis
+* Reporting
+* Dark-web intelligence
+* OPSEC
+
+The current exam has **75 questions, 2 hours, 69% passing score**. ([GIAC Certifications][11])
+
+Its associated SANS SEC497 course currently has **36 hours and 29 labs**. Current US event pricing can be around **$8,780 for training + roughly $999 certification**, so it makes far more sense when an employer sponsors it. ([SANS Institute][2])
+
+### Priority
+
+**★★★★★ reputation / ★☆☆☆☆ beginner affordability**
+
+Don't make this your first purchase.
+
+---
+
+# 💰 How To Start Earning BEFORE Day 60
+
+This is the part many courses miss.
+
+Don't wait until Day 60.
+
+### Day 1–20
+
+Learn + labs.
+
+### Day 21–30
+
+Produce:
+
+**Portfolio #1 — Digital Footprint Investigation**
+
+**Portfolio #2 — Domain Infrastructure Investigation**
+
+**Portfolio #3 — Image/Geolocation Investigation**
+
+---
+
+### Day 30
+
+Create profiles on:
+
+**LinkedIn**
+
+**Upwork**
+
+**Fiverr**
+
+and create a simple portfolio/GitHub/Notion page.
+
+---
+
+# Services You Can Actually Sell
+
+Start with narrow, defensible services.
+
+### Service 1 — Public Digital Footprint Audit
+
+For individuals/businesses auditing **their own authorized footprint**.
+
+Deliver:
+
+```text
+Accounts
+Public exposure
+Domain exposure
+Email exposure
+Images
+Recommendations
+```
+
+---
+
+### Service 2 — Company Due-Diligence Research
+
+Deliver:
+
+```text
+Company
+Founders
+Public business records
+Websites
+Domains
+News
+Adverse media
+Relationships
+Risk indicators
+Sources
+```
+
+---
+
+### Service 3 — Domain Intelligence Report
+
+Good fit if you already have cybersecurity skills.
+
+```text
+Domain
+IP
+ASN
+DNS
+Certificates
+Subdomains
+Technologies
+Historical infrastructure
+Public exposures
+```
+
+---
+
+### Service 4 — Social Media Verification
+
+Useful for:
+
+* journalists
+* media agencies
+* businesses
+* fraud teams
+
+Verify:
+
+```text
+Account authenticity
+Content origin
+Image reuse
+Timeline
+Related public identities
+Confidence assessment
+```
+
+---
+
+### Service 5 — Brand Impersonation Monitoring
+
+Search for:
+
+```text
+Fake domains
+Fake profiles
+Typosquatting
+Impersonation
+Phishing infrastructure
+Fake advertisements
+```
+
+This can eventually become **monthly recurring revenue**.
+
+---
+
+### Service 6 — Cyber Threat Intelligence Brief
+
+Excellent crossover with cybersecurity.
+
+Produce weekly/monthly:
+
+```text
+Threat
+Actor
+Infrastructure
+IOCs
+Campaign
+Timeline
+Impact
+Sources
+Recommendations
+```
+
+---
+
+# 💵 Realistic First-Earning Strategy
+
+Don't advertise:
+
+> “I can investigate anyone.”
+
+Advertise:
+
+> **“I provide evidence-backed open-source research and digital-footprint reports using publicly available information.”**
+
+Current examples show why: one recent worldwide Upwork OSINT verification project offered **$50 fixed-price**, while another ongoing digital-identity monitoring project advertised **$10–25/hour**. Those are examples, not guaranteed market rates, but they demonstrate that small research/reporting engagements exist. ([Upwork][1])
+
+A recent higher-level OSINT/analytics engagement advertised **$35–75/hour**, but required extensive experience—showing where the skill can eventually lead rather than where a beginner starts. ([Upwork][12])
+
+---
+
+# 📚 Best Learning Resources
+
+### FREE / LOW COST
+
+**1. Bellingcat Toolkit**
+
+Probably one of your most useful resources.
+
+[Bellingcat OSINT resources](https://www.bellingcat.com/?utm_source=chatgpt.com)
+
+**2. Trace Labs**
+
+Hands-on practice.
+
+[Trace Labs OSINT training](https://docs.tracelabs.org/?utm_source=chatgpt.com)
+
+**3. Maltego Academy**
+
+Link analysis + cyber investigations.
+
+[Maltego platform and Academy](https://www.maltego.com/?utm_source=chatgpt.com)
+
+**4. TCM OSINT Fundamentals / PORP**
+
+Good structured beginner → practical path. ([TCM Certifications][6])
+
+**5. IntelTechniques**
+
+Excellent advanced reference; its current program contains more than 100 hours of training and is updated as OSINT methods change. ([IntelTechniques][13])
+
+---
+
+# 🧠 The Skill Stack That Actually Gets You Paid
+
+At Day 60 your ability should look like:
+
+```text
+             OSINT INVESTIGATOR
+                    │
+       ┌────────────┼─────────────┐
+       ↓            ↓             ↓
+   Collection    Analysis      Reporting
+       │            │             │
+ Search Engine   Timeline      Executive Summary
+ People OSINT    Correlation    Evidence Table
+ Social Media    Link Analysis  Sources
+ Image/Geo       Confidence     Recommendations
+ Domain/IP       Verification   Presentation
+ Dark Web
+ Crypto
+```
+
+But underneath all of them:
+
+```text
+              OPSEC
+                +
+             Ethics
+                +
+        Legal Authorization
+                +
+        Evidence Integrity
+```
+
+---
+
+# 🏆 Recommended 60-Day Outcome
+
+Don't judge success by:
+
+❌ 18 modules watched
+❌ 200 tools bookmarked
+❌ 10 certificates
+
+Judge it by whether you have:
+
+| Asset                        |                       Target |
+| ---------------------------- | ---------------------------: |
+| Mini OSINT investigations    |                      **15+** |
+| Full professional reports    |                        **4** |
+| Maltego/link graphs          |                       **3+** |
+| Geolocation cases            |                       **5+** |
+| Domain investigations        |                       **5+** |
+| OSINT automation project     |                        **1** |
+| Major capstone               |                        **1** |
+| Public portfolio pieces      |                      **3–5** |
+| Trace Labs/CTF participation |                       **1+** |
+| First serious cert           |              **PORP target** |
+| Freelance profiles           |                      **2–3** |
+| Client proposals             | **30–50 targeted proposals** |
+
+---
+
+# 🚀 The Path I Would Personally Use
+
+```text
+MONTH 1
+│
+├─ Week 1 → Investigation + Evidence + OPSEC
+├─ Week 2 → Search + People + Username + Email
+├─ Week 3 → Domain + IP + Website
+└─ Week 4 → Social + Image + Geolocation
+             ↓
+       3 Portfolio Reports
+             ↓
+────────────────────────────
+MONTH 2
+│
+├─ Week 5 → Breach + Dark Web + Crypto
+├─ Week 6 → CDR/IPDR analysis + Fraud + AML
+├─ Week 7 → AI + Deepfake + Automation
+└─ Week 8 → Full Capstone
+             ↓
+       Professional Portfolio
+             ↓
+       Trace Labs / CTF
+             ↓
+        TCM PORP Prep
+             ↓
+     Upwork + LinkedIn + Fiverr
+             ↓
+       FIRST PAID OSINT WORK
+             ↓
+      Junior OSINT / CTI Role
+             ↓
+        OSIP / GOSI later
+```
+
+### Certification order
+
+**Maltego Academy → Trace Labs practical experience → PORP → real client/analyst experience → OSIP → GOSI if employer-funded.**
+
+এই sequence-টা ২ মাসে শুধু “OSINT tools user” নয়, **report-producing junior OSINT investigator** বানানোর জন্য অনেক বেশি effective। আর আপনার existing cybersecurity knowledge থাকলে **Domain/IP Intelligence + Threat Intelligence + Digital Footprint Investigation**—এই তিনটা earning niche দিয়ে শুরু করা সবচেয়ে natural crossover হবে।
+
+[1]: https://www.upwork.com/freelance-jobs/apply/OSINT-Investigator-Needed-for-Open-Source-Research-Verification_~022088118457147259395/?utm_source=chatgpt.com "OSINT Investigator Needed for Open-Source Research & Verification - Freelance Job in Market Research & Product Reviews - $50.00 Fixed Price, posted August 14, 2026 - Contract to Hire - Upwork"
+[2]: https://www.sans.org/cyber-security-courses/practical-open-source-intelligence?utm_source=chatgpt.com "SEC497: Practical Open-Source Intelligence (OSINT) | SANS Institute"
+[3]: https://support.maltego.com/en/support/solutions/articles/15000036759-maltego-products-and-plans?utm_source=chatgpt.com "Maltego Maltego Products and Plans Portal"
+[4]: https://www.bellingcat.com/resources/2024/09/24/bellingcat-online-investigations-toolkit/?utm_source=chatgpt.com "Introducing Bellingcat's Collaborative Open Source Toolkit"
+[5]: https://support.maltego.com/en/support/solutions/articles/15000056581-does-maltego-offer-training-or-learning-courses-?utm_source=chatgpt.com "Maltego Does Maltego offer training or learning courses? Portal"
+[6]: https://certifications.tcm-sec.com/porp/?utm_source=chatgpt.com "Practical OSINT Research Professional (PORP) Certification - TCM Security"
+[7]: https://www.maltego.com/blog/maltego-academy-learn-how-to-be-a-top-investigator/?utm_source=chatgpt.com "Maltego Academy: Learn How to Be a Top Investigator"
+[8]: https://docs.tracelabs.org/?utm_source=chatgpt.com "Trace Labs Docs"
+[9]: https://inteltechniques.com/training-faq?utm_source=chatgpt.com "IntelTechniques OSINT Training"
+[10]: https://inteltechniques.com/training-osip?utm_source=chatgpt.com "IntelTechniques OSINT Training"
+[11]: https://www.giac.org/certifications/open-source-intelligence-gosi?utm_source=chatgpt.com "GIAC Open Source Intelligence Certification (GOSI) | Cybersecurity Certification"
+[12]: https://www.upwork.com/freelance-jobs/apply/Lead-Technical-Expert-Advanced-Analytics-OSINT-Long-term_~022087989905223971278/?utm_source=chatgpt.com "Lead Technical Expert – Advanced Analytics & OSINT (Long-term) - Freelance Job in Data Analysis & Testing - More than 30 hrs/week - More than 6 months - Contract to Hire - Upwork"
+[13]: https://inteltechniques.com/training?utm_source=chatgpt.com "IntelTechniques OSINT Training"
