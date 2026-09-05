@@ -900,31 +900,33 @@ Do not access private telecom, financial, ISP, subscriber, breached, or restrict
 
 ---
 
-📚 Best Learning Resources
+##📚 Best Learning Resources
 FREE / LOW COST
 
-1. Bellingcat Toolkit 
+###1. Bellingcat Toolkit 
 
 Probably one of your most useful resources.
 
 [Bellingcat OSINT resources 
-](https://www.bellingcat.com/?utm_source=chatgpt.com)
-2. Trace Labs
+](https://www.bellingcat.com/) 
+
+###2. Trace Labs
 
 Hands-on practice.
 
 [Trace Labs OSINT training
-](https://docs.tracelabs.org/?utm_source=chatgpt.com)
-3. Maltego Academy
+](https://docs.tracelabs.org/) 
+
+###3. Maltego Academy
 
 Link analysis + cyber investigations.
 
 Maltego platform and Academy
 
-4. TCM OSINT Fundamentals / PORP
+###4. TCM OSINT Fundamentals / PORP
 
 Good structured beginner → practical path.
-https://certifications.tcm-sec.com/porp/?utm_source=chatgpt.com
+[TCM Security PORP](https://certifications.tcm-sec.com/porp/)
 
 5. IntelTechniques
 
