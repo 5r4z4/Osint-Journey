@@ -900,6 +900,35 @@ Do not access private telecom, financial, ISP, subscriber, breached, or restrict
 
 ---
 
+📚 Best Learning Resources
+FREE / LOW COST
+
+1. Bellingcat Toolkit
+
+Probably one of your most useful resources.
+
+Bellingcat OSINT resources
+
+2. Trace Labs
+
+Hands-on practice.
+
+Trace Labs OSINT training
+
+3. Maltego Academy
+
+Link analysis + cyber investigations.
+
+Maltego platform and Academy
+
+4. TCM OSINT Fundamentals / PORP
+
+Good structured beginner → practical path.
+
+5. IntelTechniques
+
+Excellent advanced reference; its current program contains more than 100 hours of training and is updated as OSINT methods change.
+
 ## Goal
 
 By the end of 60 days, you should not simply know OSINT tools.
